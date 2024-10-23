@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LottieView from 'lottie-react-native';
+import { useDispatch } from 'react-redux';
+import { startGeolocationUpdates, stopGeolocationUpdates } from '../services/GeolocationService';
+import { setLocation } from '../../store'; // Import the action
 
 import RideScreen from './RideScreen';
 
 const HomeScreen = () => {
+    const dispatch = useDispatch();
     const [rideStarted, setRideStarted] = useState(false);
 
     const startRide = () => {
         setRideStarted(true);
+        startGeolocationUpdates((locationData) => {
+            dispatch(setLocation(locationData)); // Dispatch the action to set location
+          });
     };
 
     const endRide = () => {
         setRideStarted(false);
+        stopGeolocationUpdates();
     };
 
     return (
