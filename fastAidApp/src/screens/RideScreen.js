@@ -71,29 +71,29 @@ const styles = StyleSheet.create({
     viewBlockLarge: {
         flex: 3,
         margin: 4,
-        padding: 10,
+        padding: 3,
         borderRadius: 10,
         backgroundColor: '#007bff',
         borderWidth: 5,
-        borderColor: '#abcdef'
+        borderColor: '#007bff'
     },
     viewBlockMedium: {
         flex: 2,
         margin: 4,
-        padding: 10,
+        padding: 3,
         borderRadius: 10,
         backgroundColor: '#007bff',
         borderWidth: 5,
-        borderColor: '#abcdef'
+        borderColor: '#007bff'
     },
     viewBlockSmall: {
         flex: 1,
         margin: 4,
-        padding: 10,
+        padding: 3,
         borderRadius: 10,
         backgroundColor: '#007bff',
         borderWidth: 5,
-        borderColor: '#abcdef'
+        borderColor: '#007bff'
     },
     buttonLarge: {
         backgroundColor: '#007bff',
