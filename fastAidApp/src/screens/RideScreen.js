@@ -1,5 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import LocationScreen from './LocationScreen';
+import AltitudeScreen from './AltitudeScreen';
+import SpeedScreen from './SpeedScreen';
 
 const RideScreen = ({ endRide }) => {
     return (
@@ -9,16 +12,16 @@ const RideScreen = ({ endRide }) => {
 
                 <View style={styles.column}>
                     <View style={styles.viewBlockLarge}>
-                        <Text>123</Text>
+                        <LocationScreen/>
                     </View>
                     <View style={styles.viewBlockMedium}>
-                        <Text>123</Text>
+                        <AltitudeScreen/>
                     </View>
                 </View>
 
                 <View style={styles.column}>
                     <View style={styles.viewBlockMedium}>
-                        <Text>123</Text>
+                        <SpeedScreen/>
                     </View>
                     <View style={styles.viewBlockLarge}>
                         <Text>123</Text>
