@@ -9,13 +9,28 @@ const locationSlice = createSlice({
   },
 });
 
-// Export the action
+// Create a slice for decibel level
+const decibelSlice = createSlice({
+  name: 'decibel',
+  initialState: {
+    level: 0,
+  },
+  reducers: {
+    setDecibelLevel: (state, action) => {
+      state.level = action.payload;
+    },
+  },
+});
+
+// Export the actions
 export const { setLocation } = locationSlice.actions;
+export const { setDecibelLevel } = decibelSlice.actions;
 
 // Create the store
 const store = configureStore({
   reducer: {
     location: locationSlice.reducer,
+    decibel: decibelSlice.reducer, // Add the decibel reducer here
   },
 });
 
