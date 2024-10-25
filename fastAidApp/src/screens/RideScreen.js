@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LocationScreen from './LocationScreen';
 import AltitudeScreen from './AltitudeScreen';
 import SpeedScreen from './SpeedScreen';
+import DecibelScreen from './DecibelScreen';
 
 const RideScreen = ({ endRide }) => {
     return (
@@ -31,7 +32,7 @@ const RideScreen = ({ endRide }) => {
 
             <View style={styles.row2}>
                 <View style={styles.viewBlockSmall}>
-                    <Text>123</Text>
+                    <DecibelScreen/>
                 </View>
             </View>
 
