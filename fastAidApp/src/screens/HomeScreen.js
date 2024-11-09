@@ -3,10 +3,11 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { useDispatch } from 'react-redux';
 import { startGeolocationUpdates, stopGeolocationUpdates } from '../services/GeolocationService';
-import { setDecibelLevel, setLocation } from '../../store'; // Import the action
+import { setDecibelLevel, setLocation, setGyro } from '../../store'; // Import the action
 
 import RideScreen from './RideScreen';
 import { startSoundMeter, stopSoundMeter } from '../services/SoundLevelService';
+import { startGyroscope, stopGyroscope } from '../services/GyroscopeService';
 
 const HomeScreen = () => {
     const dispatch = useDispatch();
@@ -20,12 +21,16 @@ const HomeScreen = () => {
         startSoundMeter((decibel) => {
             dispatch(setDecibelLevel(decibel)); // Dispatch the action to set location
         });
+        startGyroscope((rotation) => {
+            dispatch(setGyro(rotation))
+        })
     };
 
     const endRide = () => {
         setRideStarted(false);
         stopGeolocationUpdates();
         stopSoundMeter();
+        stopGyroscope();
     };
 
     return (
