@@ -1,6 +1,5 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-// Create a slice for location
 const locationSlice = createSlice({
   name: 'location',
   initialState: null,
@@ -9,7 +8,6 @@ const locationSlice = createSlice({
   },
 });
 
-// Create a slice for decibel level
 const decibelSlice = createSlice({
   name: 'decibel',
   initialState: {
@@ -22,15 +20,29 @@ const decibelSlice = createSlice({
   },
 });
 
+const gyroSlice = createSlice({
+    name: 'gyro',
+    initialState : {
+        x: 0.1,
+        y: 0.1,
+        z: 0.1
+    },
+    reducers: {
+        setGyro: (state, action) => action.payload,
+    }
+})
+
 // Export the actions
 export const { setLocation } = locationSlice.actions;
 export const { setDecibelLevel } = decibelSlice.actions;
+export const { setGyro } = gyroSlice.actions;
 
 // Create the store
 const store = configureStore({
   reducer: {
     location: locationSlice.reducer,
-    decibel: decibelSlice.reducer, // Add the decibel reducer here
+    decibel: decibelSlice.reducer,
+    gyro: gyroSlice.reducer
   },
 });
 

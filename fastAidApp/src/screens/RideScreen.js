@@ -4,6 +4,7 @@ import LocationScreen from './LocationScreen';
 import AltitudeScreen from './AltitudeScreen';
 import SpeedScreen from './SpeedScreen';
 import DecibelScreen from './DecibelScreen';
+import Gyroscope from './GryoscopeScreen';
 
 const RideScreen = ({ endRide }) => {
     return (
@@ -25,7 +26,7 @@ const RideScreen = ({ endRide }) => {
                         <SpeedScreen/>
                     </View>
                     <View style={styles.viewBlockLarge}>
-                        <Text>123</Text>
+                        <Gyroscope/>
                     </View>
                 </View>
             </View>
@@ -111,8 +112,3 @@ const styles = StyleSheet.create({
 });
 
 export default RideScreen;
-
-
-
-
-
