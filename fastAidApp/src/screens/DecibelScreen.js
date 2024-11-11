@@ -7,12 +7,6 @@ import { Svg, Path, G } from 'react-native-svg';
 const DecibelScreen = () => {
   const decibelLevel = useSelector((state) => state.decibel.level); // Get the decibel level from the Redux store
 
-  const normalizeDecibelLevel = (decibelLevel) => {
-    const maxDecibel = 160;
-    const minDecibel = -160;
-    return ((decibelLevel - minDecibel) / (maxDecibel - minDecibel)) * 100;
-  };
-
   const getGradientColors = (normalizedLevel) => {
     if (normalizedLevel <= 25) {
       return ['green', 'green'];
@@ -25,8 +19,7 @@ const DecibelScreen = () => {
     }
   };
 
-  const normalizedLevel = normalizeDecibelLevel(decibelLevel).toFixed(2);
-  const gradientColors = getGradientColors(normalizedLevel);
+  const gradientColors = getGradientColors(decibelLevel);
 
   return (
     <View style={styles.container}>
@@ -35,7 +28,7 @@ const DecibelScreen = () => {
           colors={gradientColors}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          style={[styles.progressBar, { width: `${normalizedLevel}%` }]}
+          style={[styles.progressBar, { width: `${decibelLevel}%` }]}
         />
       </View>
     </View>
@@ -66,6 +59,6 @@ const styles = StyleSheet.create({
       borderRadius: 10,
     },
   });
-  
+
 
 export default DecibelScreen;
