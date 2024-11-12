@@ -4866,6 +4866,7 @@ __metadata:
     react-native-safe-area-context: ^4.11.1
     react-native-screens: ^3.34.0
     react-native-sensors: ^7.3.6
+    react-native-sound: ^0.11.2
     react-native-sound-level: ^1.2.0
     react-native-speedometer-chart: ^0.7.5
     react-native-webview: ^13.12.3
@@ -8177,6 +8178,15 @@ __metadata:
   version: 1.2.0
   resolution: "react-native-sound-level@npm:1.2.0"
   checksum: e7f827728d864997f2220615bfa7b9ffcfb0c32890351f9106833e9427a308f7323bc124c93361423ae841d40ed933a98c0e6dc71aad25ac79fe0359cb303fbf
+  languageName: node
+  linkType: hard
+
+"react-native-sound@npm:^0.11.2":
+  version: 0.11.2
+  resolution: "react-native-sound@npm:0.11.2"
+  peerDependencies:
+    react-native: ">=0.8.0"
+  checksum: d019de415c5f7bc8af51bc50adff7b9c307cb990aad3ea193933f89df743bbcdbfaa33c4a12bb1143a223137cea39f8b69baf5e1c29f77cf80476616bccc6f91
   languageName: node
   linkType: hard
 

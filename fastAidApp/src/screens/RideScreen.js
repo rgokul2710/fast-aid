@@ -23,6 +23,7 @@ const RideScreen = ({ endRide }) => {
     // Handle "Yes" action in the modal
     const handleAccidentConfirmation = () => {
         // Navigate to the Accident screen
+        endRide();
         navigation.navigate('Accident');
         toggleModal();  // Close the modal
     };
