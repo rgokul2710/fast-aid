@@ -29,10 +29,10 @@ const SpeedScreen = () => {
 
 // Function to determine color based on speed with reversed order
 const getColor = (speed) => {
-  if (speed <= 20) return '#008000'; // Dark Green for Slow
-  if (speed <= 50) return '#7fff00'; // Light Green for Normal
-  if (speed <= 80) return '#ffff00'; // Yellow for Moderate
-  if (speed <= 120) return '#ff7f00'; // Orange for Fast
+  if (speed <= 2) return '#008000'; // Dark Green for Slow
+  if (speed <= 5) return '#7fff00'; // Light Green for Normal
+  if (speed <= 8) return '#ffff00'; // Yellow for Moderate
+  if (speed <= 12) return '#ff7f00'; // Orange for Fast
   return '#ff0000'; // Red for Too Fast
 };
 

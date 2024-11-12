@@ -10,6 +10,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import store from './store';
+import AccidentScreen from './src/screens/AccidentScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -32,6 +33,7 @@ const App = () => {
                 <Stack.Screen name="Splash" component={SplashScreen} options={{headerShown: false}} />
                 <Stack.Screen name="SignIn" component={SignIn} options={{headerShown: false}}/>
                 <Stack.Screen name="HomeDrawer" component={HomeDrawer} options={{headerShown: false}}/>
+                <Stack.Screen name="Accident" component={AccidentScreen} options={{headerShown: false}}/>
             </Stack.Navigator>
         </NavigationContainer>
         </Provider>
